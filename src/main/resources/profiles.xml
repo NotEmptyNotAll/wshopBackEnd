@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<companies>
+    <company alias="vms" default="true">
+        <rounding rule="ceil" />
+        <order style="mixed" use-type="true" payment-time-limit="7" />
+        <!--      <sms provider-class="wshop.sms.providers.SmsProvider_MobiSoftLine">
+           <login>spvms</login>
+           <password>admin@vms!14</password>
+           <registered-alfa-names>
+              <alfa-name default="true">PROMOTOR</alfa-name>
+              <alfa-name>SP VMS</alfa-name>
+           </registered-alfa-names>
+        </sms>-->
+
+        <sms provider-class="wshop.ejb3.sms.providers.SmsProvider_AlphaSMS">
+            <login>+380936750260</login>
+            <password>admin@vms!14</password>
+            <key>86ee14b0d85bec2188b63ff325ec1bd66d00025d</key>
+            <registered-alfa-names>
+                <alfa-name default="true">PROMOTOR</alfa-name>
+                <alfa-name>SP VMS</alfa-name>
+            </registered-alfa-names>
+        </sms>
+
+        <!--        <sms provider-class="wshop.ejb3.sms.providers.epochta.SmsProvider_Epochta">
+                    <login>yaroslv@itua.net</login>
+                    <password>admin@vms!14</password>
+                    <publicKey>f99280b1b907bfacbc4aaa922f4ec2ec</publicKey>
+                    <privateKey>119b7ca3b0028112515bc7640560a3a7</privateKey>
+                    <registered-alfa-names>
+                        <alfa-name default="true">PROMOTOR</alfa-name>
+                        <alfa-name>SP VMS</alfa-name>
+                    </registered-alfa-names>
+                </sms>-->
+    </company>
+    <company alias="promotorBelarus">
+        <rounding rule="half" />
+        <order style="mixed" use-type="true" payment-time-limit="7" />
+    </company>
+    <company alias="lithuania">
+        <rounding rule="none" />
+        <order style="old" use-type="false" payment-time-limit="7" />
+        <invoice-numeration type="sequentially" />
+        <currencies global-rate-editable="true" order-rate-editable="true" />
+    </company>
+    <company alias="simferopol">
+        <rounding rule="intens" />
+        <order style="mixed" use-type="true" payment-time-limit="7" />
+        <currencies global-rate-editable="true" order-rate-editable="false" />
+    </company>
+    <company alias="eridon">
+        <rounding rule="none" />
+        <order style="old" use-type="true" payment-time-limit="7" />
+    </company>
+    <company alias="old-template">
+        <rounding rule="none" />
+        <order style="old" use-type="true" payment-time-limit="7" />
+    </company>
+    <company alias="Chalyj">
+        <rounding rule="none" />
+        <order style="old" use-type="true" payment-time-limit="7" />
+    </company>
+    <company alias="WhiteChurch">
+        <rounding rule="integer" />
+        <order style="old" use-type="true" payment-time-limit="7" />
+    </company>
+    <company alias="Poland">
+        <rounding rule="integer" />
+        <order style="new" use-type="true" payment-time-limit="7" />
+        <sms provider-class="wshop.ejb3.sms.providers.SmsProvider_SmsPlanet">
+            <from>TEST</from>
+            <key>9e4c67b0-9a16-4dee-a6ca-5f9a4dd2d8f2</key>
+            <password>DziAK9!25</password>
+            вынесент параметр для теста (1 - тест, 0 - отправка)
+            <test>1</test>
+        </sms>
+    </company>
+    <company alias="WhiteChurchCloud">
+        <rounding rule="integer" />
+        <order style="mixed" use-type="true" payment-time-limit="7" />
+    </company>
+</companies>

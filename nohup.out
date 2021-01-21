@@ -1,0 +1,201 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------< [0;36mitd.wshop:wshop-thirdparty-client-example[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding wshop-thirdparty-client-example 0.4.34[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:3.0.0:java[m [1m(default-cli)[m @ [36mwshop-thirdparty-client-example[0;1m ---[m
+log4j:WARN No appenders could be found for logger (org.jboss.logging).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+itd.resources.appprop.AppPropertyException: itd.dt.dtException: java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:wshop-ear-0.4.34-promotorBelarus, moduleName:itd-dt-ejb3, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@23fae9dc
+	at wshop.appprop.impl.dtAppPropertiesManager.getLocalStorage(dtAppPropertiesManager.java:78)
+	at wshop.appprop.impl.dtAppPropertiesManager.getProperty(dtAppPropertiesManager.java:92)
+	at wshop.Application.loadAppProperties(Application.java:102)
+	at wshop.Application.init(Application.java:96)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:37)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: itd.dt.dtException: java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:wshop-ear-0.4.34-promotorBelarus, moduleName:itd-dt-ejb3, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@23fae9dc
+	at wshop.Application$remoteConnector.handleRequestSetFinal(Application.java:390)
+	at wshop.Application$remoteConnector.handleRequestSet(Application.java:361)
+	at itd.dt.dtExecutor.handleRequestSet(dtExecutor.java:97)
+	at itd.th.thAgent.locateThesauri(thAgent.java:332)
+	at itd.th.thAgent.locateThesauri(thAgent.java:315)
+	at wshop.appprop.impl.dtAppPropertiesManager.getLocalStorage(dtAppPropertiesManager.java:74)
+	... 6 more
+Caused by: java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:wshop-ear-0.4.34-promotorBelarus, moduleName:itd-dt-ejb3, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@23fae9dc
+	at org.jboss.ejb.client.EJBClientContext.requireEJBReceiver(EJBClientContext.java:735)
+	at org.jboss.ejb.client.ReceiverInterceptor.handleInvocation(ReceiverInterceptor.java:116)
+	at org.jboss.ejb.client.EJBClientInvocationContext.sendRequest(EJBClientInvocationContext.java:183)
+	at org.jboss.ejb.client.EJBInvocationHandler.sendRequestWithPossibleRetries(EJBInvocationHandler.java:253)
+	at org.jboss.ejb.client.EJBInvocationHandler.doInvoke(EJBInvocationHandler.java:198)
+	at org.jboss.ejb.client.EJBInvocationHandler.doInvoke(EJBInvocationHandler.java:181)
+	at org.jboss.ejb.client.EJBInvocationHandler.invoke(EJBInvocationHandler.java:144)
+	at com.sun.proxy.$Proxy30.handleRequestSet(Unknown Source)
+	at wshop.Application$remoteConnector.handleRequestSetFinal(Application.java:382)
+	... 11 more
+23:52:29.304 [com.example.demo.DemoApplication.main()] DEBUG org.springframework.boot.context.logging.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/home/gl-9809p/project/demoWshopBackEnd/target/classes/, file:/home/gl-9809p/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.2.6.RELEASE/spring-boot-starter-web-2.2.6.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/boot/spring-boot-starter/2.2.6.RELEASE/spring-boot-starter-2.2.6.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.2.6.RELEASE/spring-boot-starter-logging-2.2.6.RELEASE.jar, file:/home/gl-9809p/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar, file:/home/gl-9809p/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar, file:/home/gl-9809p/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.12.1/log4j-to-slf4j-2.12.1.jar, file:/home/gl-9809p/.m2/repository/org/apache/logging/log4j/log4j-api/2.12.1/log4j-api-2.12.1.jar, file:/home/gl-9809p/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar, file:/home/gl-9809p/.m2/repository/org/yaml/snakeyaml/1.25/snakeyaml-1.25.jar, file:/home/gl-9809p/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.2.6.RELEASE/spring-boot-starter-json-2.2.6.RELEASE.jar, file:/home/gl-9809p/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar, file:/home/gl-9809p/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar, file:/home/gl-9809p/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar, file:/home/gl-9809p/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.10.3/jackson-datatype-jdk8-2.10.3.jar, file:/home/gl-9809p/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.3/jackson-datatype-jsr310-2.10.3.jar, file:/home/gl-9809p/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.10.3/jackson-module-parameter-names-2.10.3.jar, file:/home/gl-9809p/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.2.6.RELEASE/spring-boot-starter-validation-2.2.6.RELEASE.jar, file:/home/gl-9809p/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar, file:/home/gl-9809p/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.18.Final/hibernate-validator-6.0.18.Final.jar, file:/home/gl-9809p/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar, file:/home/gl-9809p/.m2/repository/org/springframework/spring-web/5.2.5.RELEASE/spring-web-5.2.5.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/spring-beans/5.2.5.RELEASE/spring-beans-5.2.5.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/spring-webmvc/5.2.5.RELEASE/spring-webmvc-5.2.5.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/spring-aop/5.2.5.RELEASE/spring-aop-5.2.5.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/spring-context/5.2.5.RELEASE/spring-context-5.2.5.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/spring-expression/5.2.5.RELEASE/spring-expression-5.2.5.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/boot/spring-boot-devtools/2.2.6.RELEASE/spring-boot-devtools-2.2.6.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/boot/spring-boot/2.2.6.RELEASE/spring-boot-2.2.6.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/spring-core/5.2.5.RELEASE/spring-core-5.2.5.RELEASE.jar, file:/home/gl-9809p/.m2/repository/org/springframework/spring-jcl/5.2.5.RELEASE/spring-jcl-5.2.5.RELEASE.jar, file:/home/gl-9809p/.m2/repository/itd/wshop/wshop-client-lib/0.4.34/wshop-client-lib-0.4.34.jar, file:/home/gl-9809p/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/fop/1.0/fop-1.0.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/xmlgraphics-commons/1.4/xmlgraphics-commons-1.4.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-svg-dom/1.7/batik-svg-dom-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-anim/1.7/batik-anim-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-parser/1.7/batik-parser-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-bridge/1.7/batik-bridge-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-script/1.7/batik-script-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-js/1.7/batik-js-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-awt-util/1.7/batik-awt-util-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-gvt/1.7/batik-gvt-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-transcoder/1.7/batik-transcoder-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-svggen/1.7/batik-svggen-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-extension/1.7/batik-extension-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-ext/1.7/batik-ext-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/avalon/framework/avalon-framework-api/4.3.1/avalon-framework-api-4.3.1.jar, file:/home/gl-9809p/.m2/repository/org/apache/avalon/framework/avalon-framework-impl/4.3.1/avalon-framework-impl-4.3.1.jar, file:/home/gl-9809p/.m2/repository/org/jdom/jdom/1.1/jdom-1.1.jar, file:/home/gl-9809p/.m2/repository/avalon-framework/avalon-framework-impl/4.2.0/avalon-framework-impl-4.2.0.jar, file:/home/gl-9809p/.m2/repository/commons-io/commons-io/1.3.1/commons-io-1.3.1.jar, file:/home/gl-9809p/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.2.6.RELEASE/spring-boot-starter-tomcat-2.2.6.RELEASE.jar, file:/home/gl-9809p/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar, file:/home/gl-9809p/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.33/tomcat-embed-core-9.0.33.jar, file:/home/gl-9809p/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.33/tomcat-embed-el-9.0.33.jar, file:/home/gl-9809p/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.33/tomcat-embed-websocket-9.0.33.jar, file:/home/gl-9809p/.m2/repository/xalan/serializer/2.7.1/serializer-2.7.1.jar, file:/home/gl-9809p/.m2/repository/xalan/xalan/2.7.1/xalan-2.7.1.jar, file:/home/gl-9809p/.m2/repository/xerces/xercesImpl/2.7.1/xercesImpl-2.7.1.jar, file:/home/gl-9809p/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar, file:/home/gl-9809p/.m2/repository/xml-apis/xml-apis-ext/1.3.04/xml-apis-ext-1.3.04.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-dom/1.7/batik-dom-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-css/1.7/batik-css-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-util/1.7/batik-util-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/xmlgraphics/batik-xml/1.7/batik-xml-1.7.jar, file:/home/gl-9809p/.m2/repository/org/apache/poi/poi/3.7/poi-3.7.jar, file:/home/gl-9809p/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar, file:/home/gl-9809p/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.8.9/libphonenumber-8.8.9.jar, file:/home/gl-9809p/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar, file:/home/gl-9809p/.m2/repository/org/jboss/spec/javax/rmi/jboss-rmi-api_1.0_spec/1.0.6.Final/jboss-rmi-api_1.0_spec-1.0.6.Final.jar, file:/home/gl-9809p/.m2/repository/org/eclipse/persistence/eclipselink/2.5.2/eclipselink-2.5.2.jar, file:/home/gl-9809p/.m2/repository/org/eclipse/persistence/javax.persistence/2.1.0/javax.persistence-2.1.0.jar, file:/home/gl-9809p/.m2/repository/org/eclipse/persistence/commonj.sdo/2.1.1/commonj.sdo-2.1.1.jar, file:/home/gl-9809p/.m2/repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar, file:/home/gl-9809p/.m2/repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar, file:/home/gl-9809p/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar, file:/home/gl-9809p/.m2/repository/org/quartz-scheduler/quartz-jobs/2.2.2/quartz-jobs-2.2.2.jar, file:/home/gl-9809p/.m2/repository/org/json/json/20160212/json-20160212.jar, file:/home/gl-9809p/.m2/repository/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar, file:/home/gl-9809p/.m2/repository/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar, file:/home/gl-9809p/.m2/repository/org/swinglabs/swing-layout/1.0.3/swing-layout-1.0.3.jar, file:/home/gl-9809p/.m2/repository/junit/junit/4.7/junit-4.7.jar, file:/home/gl-9809p/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar, file:/home/gl-9809p/.m2/repository/com/ibm/icu/icu4j/53.1/icu4j-53.1.jar, file:/home/gl-9809p/.m2/repository/org/apache/axis/axis/1.4/axis-1.4.jar, file:/home/gl-9809p/.m2/repository/org/apache/axis/axis-jaxrpc/1.4/axis-jaxrpc-1.4.jar, file:/home/gl-9809p/.m2/repository/commons-discovery/commons-discovery/0.4/commons-discovery-0.4.jar, file:/home/gl-9809p/.m2/repository/wsdl4j/wsdl4j/1.6.2/wsdl4j-1.6.2.jar, file:/home/gl-9809p/.m2/repository/org/apache/httpcomponents/httpclient/4.0-alpha4/httpclient-4.0-alpha4.jar, file:/home/gl-9809p/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar, file:/home/gl-9809p/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar, file:/home/gl-9809p/.m2/repository/org/imgscalr/imgscalr-lib/4.2/imgscalr-lib-4.2.jar, file:/home/gl-9809p/.m2/repository/org/hibernate/hibernate-core/4.2.14.Final/hibernate-core-4.2.14.Final.jar, file:/home/gl-9809p/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar, file:/home/gl-9809p/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar, file:/home/gl-9809p/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/home/gl-9809p/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/home/gl-9809p/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final.jar, file:/home/gl-9809p/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar, file:/home/gl-9809p/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.2.Final/hibernate-commons-annotations-4.0.2.Final.jar, file:/home/gl-9809p/.m2/repository/org/jdesktop/beansbinding/1.2.1/beansbinding-1.2.1.jar, file:/home/gl-9809p/.m2/repository/commons-validator/commons-validator/1.4.0/commons-validator-1.4.0.jar, file:/home/gl-9809p/.m2/repository/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar, file:/home/gl-9809p/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar, file:/home/gl-9809p/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar, file:/home/gl-9809p/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar]
+23:52:29.310 [com.example.demo.DemoApplication.main()] ERROR org.springframework.boot.SpringApplication - Application run failed
+java.lang.ExceptionInInitializerError: null
+	at org.jboss.marshalling.river.RiverMarshaller.<clinit>(RiverMarshaller.java:1274)
+	at org.jboss.marshalling.river.RiverMarshallerFactory.createMarshaller(RiverMarshallerFactory.java:54)
+	at org.jboss.naming.remote.protocol.v1.WriteUtil.getMarshaller(WriteUtil.java:141)
+	at org.jboss.naming.remote.protocol.v1.WriteUtil.prepareForMarshalling(WriteUtil.java:113)
+	at org.jboss.naming.remote.protocol.v1.Protocol$1$1.write(Protocol.java:81)
+	at org.jboss.naming.remote.protocol.v1.WriteUtil.write(WriteUtil.java:61)
+	at org.jboss.naming.remote.protocol.v1.Protocol$1.execute(Protocol.java:76)
+	at org.jboss.naming.remote.protocol.v1.RemoteNamingStoreV1.lookup(RemoteNamingStoreV1.java:95)
+	at org.jboss.naming.remote.client.HaRemoteNamingStore$1.operation(HaRemoteNamingStore.java:275)
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.namingOperation(HaRemoteNamingStore.java:132)
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.lookup(HaRemoteNamingStore.java:271)
+	at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:79)
+	at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:83)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at org.springframework.jndi.JndiTemplate.lambda$lookup$0(JndiTemplate.java:157)
+	at org.springframework.jndi.JndiTemplate.execute(JndiTemplate.java:92)
+	at org.springframework.jndi.JndiTemplate.lookup(JndiTemplate.java:157)
+	at org.springframework.jndi.JndiTemplate.lookup(JndiTemplate.java:179)
+	at org.springframework.jndi.JndiLocatorSupport.lookup(JndiLocatorSupport.java:96)
+	at org.springframework.jndi.JndiLocatorDelegate.lookup(JndiLocatorDelegate.java:64)
+	at org.springframework.jndi.JndiLocatorSupport.lookup(JndiLocatorSupport.java:78)
+	at org.springframework.jndi.JndiLocatorDelegate.lookup(JndiLocatorDelegate.java:59)
+	at org.springframework.jndi.JndiPropertySource.getProperty(JndiPropertySource.java:93)
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:85)
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:62)
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:535)
+	at org.springframework.core.env.AbstractEnvironment.doGetActiveProfiles(AbstractEnvironment.java:238)
+	at org.springframework.core.env.AbstractEnvironment.getActiveProfiles(AbstractEnvironment.java:224)
+	at org.springframework.boot.SpringApplication.configureProfiles(SpringApplication.java:524)
+	at org.springframework.boot.SpringApplication.configureEnvironment(SpringApplication.java:482)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:45)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.IllegalStateException: No standard field found for reverse order comparator!
+	at org.jboss.marshalling.river.Protocol.<clinit>(Protocol.java:212)
+	... 35 common frames omitted
+[[1;33mWARNING[m] 
+[1;31mjava.lang.ExceptionInInitializerError[m
+    [1mat[m org.jboss.marshalling.river.RiverMarshaller.<clinit> ([1mRiverMarshaller.java:1274[m)
+    [1mat[m org.jboss.marshalling.river.RiverMarshallerFactory.createMarshaller ([1mRiverMarshallerFactory.java:54[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.WriteUtil.getMarshaller ([1mWriteUtil.java:141[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.WriteUtil.prepareForMarshalling ([1mWriteUtil.java:113[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.Protocol$1$1.write ([1mProtocol.java:81[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.WriteUtil.write ([1mWriteUtil.java:61[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.Protocol$1.execute ([1mProtocol.java:76[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.RemoteNamingStoreV1.lookup ([1mRemoteNamingStoreV1.java:95[m)
+    [1mat[m org.jboss.naming.remote.client.HaRemoteNamingStore$1.operation ([1mHaRemoteNamingStore.java:275[m)
+    [1mat[m org.jboss.naming.remote.client.HaRemoteNamingStore.namingOperation ([1mHaRemoteNamingStore.java:132[m)
+    [1mat[m org.jboss.naming.remote.client.HaRemoteNamingStore.lookup ([1mHaRemoteNamingStore.java:271[m)
+    [1mat[m org.jboss.naming.remote.client.RemoteContext.lookup ([1mRemoteContext.java:79[m)
+    [1mat[m org.jboss.naming.remote.client.RemoteContext.lookup ([1mRemoteContext.java:83[m)
+    [1mat[m javax.naming.InitialContext.lookup ([1mInitialContext.java:409[m)
+    [1mat[m org.springframework.jndi.JndiTemplate.lambda$lookup$0 ([1mJndiTemplate.java:157[m)
+    [1mat[m org.springframework.jndi.JndiTemplate.execute ([1mJndiTemplate.java:92[m)
+    [1mat[m org.springframework.jndi.JndiTemplate.lookup ([1mJndiTemplate.java:157[m)
+    [1mat[m org.springframework.jndi.JndiTemplate.lookup ([1mJndiTemplate.java:179[m)
+    [1mat[m org.springframework.jndi.JndiLocatorSupport.lookup ([1mJndiLocatorSupport.java:96[m)
+    [1mat[m org.springframework.jndi.JndiLocatorDelegate.lookup ([1mJndiLocatorDelegate.java:64[m)
+    [1mat[m org.springframework.jndi.JndiLocatorSupport.lookup ([1mJndiLocatorSupport.java:78[m)
+    [1mat[m org.springframework.jndi.JndiLocatorDelegate.lookup ([1mJndiLocatorDelegate.java:59[m)
+    [1mat[m org.springframework.jndi.JndiPropertySource.getProperty ([1mJndiPropertySource.java:93[m)
+    [1mat[m org.springframework.core.env.PropertySourcesPropertyResolver.getProperty ([1mPropertySourcesPropertyResolver.java:85[m)
+    [1mat[m org.springframework.core.env.PropertySourcesPropertyResolver.getProperty ([1mPropertySourcesPropertyResolver.java:62[m)
+    [1mat[m org.springframework.core.env.AbstractEnvironment.getProperty ([1mAbstractEnvironment.java:535[m)
+    [1mat[m org.springframework.core.env.AbstractEnvironment.doGetActiveProfiles ([1mAbstractEnvironment.java:238[m)
+    [1mat[m org.springframework.core.env.AbstractEnvironment.getActiveProfiles ([1mAbstractEnvironment.java:224[m)
+    [1mat[m org.springframework.boot.SpringApplication.configureProfiles ([1mSpringApplication.java:524[m)
+    [1mat[m org.springframework.boot.SpringApplication.configureEnvironment ([1mSpringApplication.java:482[m)
+    [1mat[m org.springframework.boot.SpringApplication.prepareEnvironment ([1mSpringApplication.java:343[m)
+    [1mat[m org.springframework.boot.SpringApplication.run ([1mSpringApplication.java:308[m)
+    [1mat[m com.example.demo.DemoApplication.main ([1mDemoApplication.java:45[m)
+    [1mat[m org.codehaus.mojo.exec.ExecJavaMojo$1.run ([1mExecJavaMojo.java:254[m)
+    [1mat[m java.lang.Thread.run ([1mThread.java:834[m)
+[1mCaused by[m: java.lang.IllegalStateException: [1;31mNo standard field found for reverse order comparator![m
+    [1mat[m org.jboss.marshalling.river.Protocol.<clinit> ([1mProtocol.java:212[m)
+    [1mat[m org.jboss.marshalling.river.RiverMarshaller.<clinit> ([1mRiverMarshaller.java:1274[m)
+    [1mat[m org.jboss.marshalling.river.RiverMarshallerFactory.createMarshaller ([1mRiverMarshallerFactory.java:54[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.WriteUtil.getMarshaller ([1mWriteUtil.java:141[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.WriteUtil.prepareForMarshalling ([1mWriteUtil.java:113[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.Protocol$1$1.write ([1mProtocol.java:81[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.WriteUtil.write ([1mWriteUtil.java:61[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.Protocol$1.execute ([1mProtocol.java:76[m)
+    [1mat[m org.jboss.naming.remote.protocol.v1.RemoteNamingStoreV1.lookup ([1mRemoteNamingStoreV1.java:95[m)
+    [1mat[m org.jboss.naming.remote.client.HaRemoteNamingStore$1.operation ([1mHaRemoteNamingStore.java:275[m)
+    [1mat[m org.jboss.naming.remote.client.HaRemoteNamingStore.namingOperation ([1mHaRemoteNamingStore.java:132[m)
+    [1mat[m org.jboss.naming.remote.client.HaRemoteNamingStore.lookup ([1mHaRemoteNamingStore.java:271[m)
+    [1mat[m org.jboss.naming.remote.client.RemoteContext.lookup ([1mRemoteContext.java:79[m)
+    [1mat[m org.jboss.naming.remote.client.RemoteContext.lookup ([1mRemoteContext.java:83[m)
+    [1mat[m javax.naming.InitialContext.lookup ([1mInitialContext.java:409[m)
+    [1mat[m org.springframework.jndi.JndiTemplate.lambda$lookup$0 ([1mJndiTemplate.java:157[m)
+    [1mat[m org.springframework.jndi.JndiTemplate.execute ([1mJndiTemplate.java:92[m)
+    [1mat[m org.springframework.jndi.JndiTemplate.lookup ([1mJndiTemplate.java:157[m)
+    [1mat[m org.springframework.jndi.JndiTemplate.lookup ([1mJndiTemplate.java:179[m)
+    [1mat[m org.springframework.jndi.JndiLocatorSupport.lookup ([1mJndiLocatorSupport.java:96[m)
+    [1mat[m org.springframework.jndi.JndiLocatorDelegate.lookup ([1mJndiLocatorDelegate.java:64[m)
+    [1mat[m org.springframework.jndi.JndiLocatorSupport.lookup ([1mJndiLocatorSupport.java:78[m)
+    [1mat[m org.springframework.jndi.JndiLocatorDelegate.lookup ([1mJndiLocatorDelegate.java:59[m)
+    [1mat[m org.springframework.jndi.JndiPropertySource.getProperty ([1mJndiPropertySource.java:93[m)
+    [1mat[m org.springframework.core.env.PropertySourcesPropertyResolver.getProperty ([1mPropertySourcesPropertyResolver.java:85[m)
+    [1mat[m org.springframework.core.env.PropertySourcesPropertyResolver.getProperty ([1mPropertySourcesPropertyResolver.java:62[m)
+    [1mat[m org.springframework.core.env.AbstractEnvironment.getProperty ([1mAbstractEnvironment.java:535[m)
+    [1mat[m org.springframework.core.env.AbstractEnvironment.doGetActiveProfiles ([1mAbstractEnvironment.java:238[m)
+    [1mat[m org.springframework.core.env.AbstractEnvironment.getActiveProfiles ([1mAbstractEnvironment.java:224[m)
+    [1mat[m org.springframework.boot.SpringApplication.configureProfiles ([1mSpringApplication.java:524[m)
+    [1mat[m org.springframework.boot.SpringApplication.configureEnvironment ([1mSpringApplication.java:482[m)
+    [1mat[m org.springframework.boot.SpringApplication.prepareEnvironment ([1mSpringApplication.java:343[m)
+    [1mat[m org.springframework.boot.SpringApplication.run ([1mSpringApplication.java:308[m)
+    [1mat[m com.example.demo.DemoApplication.main ([1mDemoApplication.java:45[m)
+    [1mat[m org.codehaus.mojo.exec.ExecJavaMojo$1.run ([1mExecJavaMojo.java:254[m)
+    [1mat[m java.lang.Thread.run ([1mThread.java:834[m)
+[[1;33mWARNING[m] thread Thread[Remoting "config-based-ejb-client-endpoint" read-1,5,com.example.demo.DemoApplication] was interrupted but is still alive after waiting at least 14923msecs
+[[1;33mWARNING[m] thread Thread[Remoting "config-based-ejb-client-endpoint" read-1,5,com.example.demo.DemoApplication] will linger despite being asked to die via interruption
+[[1;33mWARNING[m] thread Thread[Remoting "config-based-ejb-client-endpoint" write-1,5,com.example.demo.DemoApplication] will linger despite being asked to die via interruption
+[[1;33mWARNING[m] thread Thread[ejb-client-context-tasks-4-thread-1,5,com.example.demo.DemoApplication] will linger despite being asked to die via interruption
+[[1;33mWARNING[m] NOTE: 3 thread(s) did not finish despite being asked to  via interruption. This is not a problem with exec:java, it is a problem with the running code. Although not serious, it should be remedied.
+[[1;33mWARNING[m] Couldn't destroy threadgroup org.codehaus.mojo.exec.ExecJavaMojo$IsolatedThreadGroup[name=com.example.demo.DemoApplication,maxpri=10]
+[1;31mjava.lang.IllegalThreadStateException[m
+    [1mat[m java.lang.ThreadGroup.destroy ([1mThreadGroup.java:776[m)
+    [1mat[m org.codehaus.mojo.exec.ExecJavaMojo.execute ([1mExecJavaMojo.java:293[m)
+    [1mat[m org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo ([1mDefaultBuildPluginManager.java:137[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:210[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:156[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:148[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:117[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:81[m)
+    [1mat[m org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build ([1mSingleThreadedBuilder.java:56[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleStarter.execute ([1mLifecycleStarter.java:128[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:305[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:192[m)
+    [1mat[m org.apache.maven.DefaultMaven.execute ([1mDefaultMaven.java:105[m)
+    [1mat[m org.apache.maven.cli.MavenCli.execute ([1mMavenCli.java:957[m)
+    [1mat[m org.apache.maven.cli.MavenCli.doMain ([1mMavenCli.java:289[m)
+    [1mat[m org.apache.maven.cli.MavenCli.main ([1mMavenCli.java:193[m)
+    [1mat[m jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 ([1mNative Method[m)
+    [1mat[m jdk.internal.reflect.NativeMethodAccessorImpl.invoke ([1mNativeMethodAccessorImpl.java:62[m)
+    [1mat[m jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke ([1mDelegatingMethodAccessorImpl.java:43[m)
+    [1mat[m java.lang.reflect.Method.invoke ([1mMethod.java:566[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced ([1mLauncher.java:282[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launch ([1mLauncher.java:225[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode ([1mLauncher.java:406[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.main ([1mLauncher.java:347[m)
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  17.474 s
+[[1;34mINFO[m] Finished at: 2021-01-20T23:52:44+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.codehaus.mojo:exec-maven-plugin:3.0.0:java[m [1m(default-cli)[m on project [36mwshop-thirdparty-client-example[m: [1;31mAn exception occured while executing the Java class. null[m: ExceptionInInitializerError: No standard field found for reverse order comparator! -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

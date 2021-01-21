@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<i18n>
+    <currencies>
+        <currency alias="UAH">
+            <spelling>
+                <language alias="uk" default="true">
+                    <rule-set>%spellout-cardinal-feminine</rule-set>
+                    <acronym>грн.</acronym>
+                    <coin-acronym>коп.</coin-acronym>
+                </language>
+                <language alias="ru">
+                    <rule-set>%spellout-cardinal-feminine</rule-set>
+                    <acronym>грн.</acronym>
+                    <coin-acronym>коп.</coin-acronym>
+                </language>
+            </spelling>
+        </currency>
+
+        <currency alias="RUB">
+            <spelling>
+                <language alias="ru" default="true">
+                    <rule-set>%spellout-cardinal-masculine</rule-set>
+                    <acronym>руб.</acronym>
+                    <coin-acronym>коп.</coin-acronym>
+                </language>
+            </spelling>
+        </currency>
+
+        <currency alias="PLN">
+            <spelling>
+                <language alias="pl" default="true">
+                    <rule-set>%spellout-cardinal-masculine</rule-set>
+                    <acronym>zł.</acronym>
+                    <coin-acronym>gr.</coin-acronym>
+                </language>
+            </spelling>
+        </currency>
+
+        <currency alias="USD">
+            <spelling>
+                <language alias="en" default="true">
+                    <rule-set>%spellout-cardinal-masculine</rule-set>
+                    <acronym>USD</acronym>
+                    <coin-acronym>c.</coin-acronym>
+                </language>
+            </spelling>
+        </currency>
+
+        <currency alias="EUR">
+            <spelling>
+                <language alias="en" default="true">
+                    <rule-set>%spellout-cardinal-masculine</rule-set>
+                    <acronym>EUR</acronym>
+                    <coin-acronym>c.</coin-acronym>
+                </language>
+            </spelling>
+        </currency>
+
+        <currency alias="LTL">
+            <spelling>
+                <language alias="lt" default="true">
+                    <rule-set>%spellout-cardinal-masculine</rule-set>
+                    <acronym>Lt.</acronym>
+                    <coin-acronym>ct.</coin-acronym>
+                </language>
+            </spelling>
+        </currency>
+
+        <currency alias="BYN">
+            <spelling>
+                <language alias="ru" default="true">
+                    <rule-set>%spellout-cardinal-masculine</rule-set>
+                    <acronym>руб.</acronym>
+                    <coin-acronym>коп.</coin-acronym>
+                </language>
+            </spelling>
+        </currency>
+    </currencies>
+
+    <countries>
+        <country alias="UA" default="true">
+
+            <default-currency>UAH</default-currency>
+            <date-format>dd.MM.yy</date-format>
+
+            <documents>
+                <document alias="timesheet" printable="true" type-print="0">
+                    <title-key>wshop.WOrderPrint.timesheet</title-key>
+                    <xsl-template>/XSLTemplates/i18n/timesheet/TimeSheet.xsl</xsl-template>
+                </document>
+                <document alias="order" printable="true" def-copies-quant="1">
+                    <title-key>wshop.WOrderPrint.blank</title-key>
+                    <xsl-template>/XSLTemplates/order/materials.xsl</xsl-template>
+                </document>
+                <document alias="jobs-card2" printable="true" def-copies-quant="1" type-print="1">
+                    <title-key>wshop.WOrderPrint.map1</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_GBC_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-card1" printable="true" def-copies-quant="1" type-print="1">
+                    <title-key>wshop.WOrderPrint.map5</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_GBC_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardT" printable="true" def-copies-quant="1" type-print="2">
+                    <title-key>wshop.WOrderPrint.map2</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_TC.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardBC2" printable="true" def-copies-quant="1" type-print="3">
+                    <title-key>wshop.WOrderPrint.map3</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_BC_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardBC1" printable="true" def-copies-quant="1" type-print="3">
+                    <title-key>wshop.WOrderPrint.map4</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_BC_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardKV2" printable="true" def-copies-quant="1" type-print="4">
+                    <title-key>wshop.WOrderPrint.map7</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_KV_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardKV1" printable="true" def-copies-quant="1" type-print="4">
+                    <title-key>wshop.WOrderPrint.map6</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_KV_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardS" printable="true" def-copies-quant="1" type-print="10">
+                    <title-key>wshop.WOrderPrint.map10</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_S.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardRV" printable="true" def-copies-quant="1" type-print="99">
+                    <title-key>wshop.WOrderPrint.map11</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_RV.xsl</xsl-template>
+                </document>
+                <document alias="covering-note" printable="true" def-copies-quant="1">
+                    <title-key>wshop.WOrderPrint.CoveringNote</title-key>
+                    <xsl-template>/XSLTemplates/covnote/covnote.xsl</xsl-template>
+                </document>
+                <document alias="invoice" printable="true" numeration="invoice">
+                    <title-key>wshop.WOrderPrint.invoice</title-key>
+                    <xsl-template>/XSLTemplates/invoice/invoice.xsl</xsl-template>
+                </document>
+                <document alias="act" printable="true" closed-order-only="true">
+                    <title-key>wshop.WOrderPrint.act</title-key>
+                    <xsl-template>/XSLTemplates/act/act.xsl</xsl-template>
+                </document>
+<!--                <document alias="tax-bill" printable="true" closed-order-only="true">-->
+<!--                    <title-key>wshop.WOrderPrint.bill</title-key>-->
+<!--                    <xsl-template>/XSLTemplates/podnakl/podnakl.xsl</xsl-template>-->
+<!--                </document>-->
+                <document alias="procuration" printable="true">
+                    <title-key>wshop.WOrderPrint.procuration</title-key>
+                    <xsl-template>/XSLTemplates/procuration/procuration.xsl</xsl-template>
+                </document>
+            </documents>
+        </country>
+
+        <country alias="RU">
+
+            <default-currency>RUB</default-currency>
+            <date-format>dd.MM.yy</date-format>
+
+            <documents>
+                <document alias="timesheet" printable="true" type-print="0">
+                    <title-key>wshop.WOrderPrint.timesheet</title-key>
+                    <xsl-template>/XSLTemplates/i18n/timesheet/TimeSheet.xsl</xsl-template>
+                </document>
+                <document alias="order" printable="true" def-copies-quant="1">
+                    <title-key>wshop.WOrderPrint.blank</title-key>
+                    <xsl-template>/XSLTemplates/order/materials.xsl</xsl-template>
+                </document>
+                <document alias="jobs-card2" printable="true" def-copies-quant="1" type-print="1">
+                    <title-key>wshop.WOrderPrint.map1</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryRU/map/map_GBC_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardT" printable="true" def-copies-quant="1" type-print="2">
+                    <title-key>wshop.WOrderPrint.map2</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryRU/map/map_TC.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardBC2" printable="true" def-copies-quant="1" type-print="3">
+                    <title-key>wshop.WOrderPrint.map3</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryRU/map/map_BC_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardBC1" printable="true" def-copies-quant="1" type-print="3">
+                    <title-key>wshop.WOrderPrint.map4</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryRU/map/map_BC_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-card1" printable="true" def-copies-quant="1" type-print="1">
+                    <title-key>wshop.WOrderPrint.map5</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryRU/map/map_GBC_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardKV1" printable="true" def-copies-quant="1" type-print="4">
+                    <title-key>wshop.WOrderPrint.map6</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryRU/map/map_KV_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardKV2" printable="true" def-copies-quant="1" type-print="4">
+                    <title-key>wshop.WOrderPrint.map7</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryRU/map/map_KV_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardS" printable="true" def-copies-quant="1" type-print="10">
+                    <title-key>wshop.WOrderPrint.map10</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryRU/map/map_S.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardRV" printable="true" def-copies-quant="1" type-print="99">
+                    <title-key>wshop.WOrderPrint.map11</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryRU/map/map_RV.xsl</xsl-template>
+                </document>
+                <document alias="covering-note" printable="true">
+                    <title-key>wshop.WOrderPrint.CoveringNote</title-key>
+                    <xsl-template>/XSLTemplates/covnote/covnote.xsl</xsl-template>
+                </document>
+                <document alias="invoice" printable="true">
+                    <title-key>wshop.WOrderPrint.invoice</title-key>
+                    <xsl-template>/XSLTemplates/invoice/invoice.xsl</xsl-template>
+                </document>
+                <document alias="act" printable="true" closed-order-only="true">
+                    <title-key>wshop.WOrderPrint.act</title-key>
+                    <xsl-template>/XSLTemplates/act/act.xsl</xsl-template>
+                </document>
+<!--                <document alias="tax-bill" printable="true" closed-order-only="true">-->
+<!--                    <title-key>wshop.WOrderPrint.bill</title-key>-->
+<!--                    <xsl-template>/XSLTemplates/podnakl/podnakl.xsl</xsl-template>-->
+<!--                </document>-->
+                <document alias="procuration" printable="true">
+                    <title-key>wshop.WOrderPrint.procuration</title-key>
+                    <xsl-template>/XSLTemplates/procuration/procuration.xsl</xsl-template>
+                </document>
+            </documents>
+        </country>
+
+        <country alias="BY">
+
+            <default-currency>BYN</default-currency>
+            <date-format>dd.MM.yy</date-format>
+
+            <documents>
+                <document alias="timesheet" printable="true" type-print="0">
+                    <title-key>wshop.WOrderPrint.timesheet</title-key>
+                    <xsl-template>/XSLTemplates/i18n/timesheet/TimeSheet.xsl</xsl-template>
+                </document>
+                <document alias="order" printable="true" def-copies-quant="1">
+                    <title-key>wshop.WOrderPrint.blank</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/order/materialsBY.xsl</xsl-template>
+                </document>
+                <document alias="jobs-card2" printable="true" def-copies-quant="1" type-print="1">
+                    <title-key>wshop.WOrderPrint.map1</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/map/map_GBC_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardT" printable="true" def-copies-quant="1" type-print="2">
+                    <title-key>wshop.WOrderPrint.map2</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/map/map_TC.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardBC2" printable="true" def-copies-quant="1" type-print="3">
+                    <title-key>wshop.WOrderPrint.map3</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/map/map_BC_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardBC1" printable="true" def-copies-quant="1" type-print="3">
+                    <title-key>wshop.WOrderPrint.map4</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/map/map_BC_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-card1" printable="true" def-copies-quant="1" type-print="1">
+                    <title-key>wshop.WOrderPrint.map5</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/map/map_GBC_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardKV1" printable="true" def-copies-quant="1" type-print="4">
+                    <title-key>wshop.WOrderPrint.map6</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/map/map_KV_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardKV2" printable="true" def-copies-quant="1" type-print="4">
+                    <title-key>wshop.WOrderPrint.map7</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/map/map_KV_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardS" printable="true" def-copies-quant="1" type-print="10">
+                    <title-key>wshop.WOrderPrint.map10</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/map/map_S.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardRV" printable="true" def-copies-quant="1" type-print="99">
+                    <title-key>wshop.WOrderPrint.map11</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/map/map_RV.xsl</xsl-template>
+                </document>
+                <document alias="covering-note" printable="true" def-copies-quant="1">
+                    <title-key>wshop.WOrderPrint.CoveringNote</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/covnote/covnoteBY.xsl</xsl-template>
+                </document>
+                <document alias="invoice" printable="true" numeration="invoice">
+                    <title-key>wshop.WOrderPrint.invoice</title-key>
+                    <xsl-template>/XSLTemplates/invoice/invoice.xsl</xsl-template>
+                </document>
+                <document alias="act" printable="true" closed-order-only="true">
+                    <title-key>wshop.WOrderPrint.act</title-key>
+                    <xsl-template>/XSLTemplates/act/act.xsl</xsl-template>
+                </document>
+                <document alias="tax-bill" printable="true">
+                    <title-key>wshop.WOrderPrint.bill</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryBY/agreement/agreement.xsl</xsl-template>
+                </document>
+                <document alias="procuration" printable="true">
+                    <title-key>wshop.WOrderPrint.procuration</title-key>
+                    <xsl-template>/XSLTemplates/procuration/procuration.xsl</xsl-template>
+                </document>
+            </documents>
+        </country>
+
+        <country alias="PL">
+
+            <default-currency>PLN</default-currency>
+            <date-format>dd.MM.yy</date-format>
+
+            <documents>
+                <document alias="timesheet" printable="true" type-print="0">
+                    <title-key>wshop.WOrderPrint.timesheet</title-key>
+                    <xsl-template>/XSLTemplates/i18n/timesheet/TimeSheet.xsl</xsl-template>
+                </document>
+                <document alias="order" printable="true">
+                    <title-key>wshop.WOrderPrint.blank</title-key>
+                    <xsl-template>/XSLTemplates/order/materials.xsl</xsl-template>
+                </document>
+                <document alias="jobs-card2" printable="true" type-print="1">
+                    <title-key>wshop.WOrderPrint.map1</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_GBC_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-card1" printable="true" type-print="1">
+                    <title-key>wshop.WOrderPrint.map5</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_GBC_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardT" printable="true" type-print="2">
+                    <title-key>wshop.WOrderPrint.map2</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_TC.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardBC2" printable="true" type-print="3">
+                    <title-key>wshop.WOrderPrint.map3</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_BC_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardBC1" printable="true" type-print="3">
+                    <title-key>wshop.WOrderPrint.map4</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_BC_1.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardKV2" printable="true" type-print="4">
+                    <title-key>wshop.WOrderPrint.map7</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryPL/map/map_KV_1PL.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardKV1" printable="true" type-print="4">
+                    <title-key>wshop.WOrderPrint.map6</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_KV_2.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardS" printable="true" type-print="10">
+                    <title-key>wshop.WOrderPrint.map10</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryPL/map/map_SPL.xsl</xsl-template>
+                </document>
+                <document alias="jobs-cardRV" printable="true" type-print="99">
+                    <title-key>wshop.WOrderPrint.map11</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryUA/map/map_RV.xsl</xsl-template>
+                </document>
+                <document alias="covering-note" printable="true">
+                    <title-key>wshop.WOrderPrint.CoveringNote</title-key>
+                    <xsl-template>/XSLTemplates/i18n/countryPL/covnote/covnotePL.xsl</xsl-template>
+                </document>
+                <document alias="invoice" printable="true" numeration="invoice">
+                    <title-key>wshop.WOrderPrint.invoice</title-key>
+                    <xsl-template>/XSLTemplates/invoice/invoice.xsl</xsl-template>
+                </document>
+                <document alias="act" printable="true" closed-order-only="true">
+                    <title-key>wshop.WOrderPrint.act</title-key>
+                    <xsl-template>/XSLTemplates/act/act.xsl</xsl-template>
+                </document>
+            </documents>
+        </country>
+
+        <country alias="LT">
+
+            <default-currency>LTL</default-currency>
+            <date-format>yyyy-MM-dd</date-format>
+
+            <documents>
+                <document alias="timesheet" printable="true" type-print="0">
+                    <title-key>wshop.WOrderPrint.timesheet</title-key>
+                    <xsl-template>/XSLTemplates/i18n/timesheet/TimeSheet.xsl</xsl-template>
+                </document>
+                <document alias="order" printable="true" def-copies-quant="1">
+                    <title-key>wshop.WOrderPrint.blank</title-key>
+                    <xsl-template>/XSLTemplates/order/materials.xsl</xsl-template>
+                </document>
+                <document alias="jobs-card" printable="true" def-copies-quant="1">
+                    <title-key>wshop.WOrderPrint.map1</title-key>
+                    <xsl-template>/XSLTemplates/map2/map2.xsl</xsl-template>
+                </document>
+                <document alias="covering-note" printable="true">
+                    <title-key>wshop.WOrderPrint.CoveringNote</title-key>
+                    <xsl-template>/XSLTemplates/covnote/covnote.xsl</xsl-template>
+                </document>
+                <document alias="invoice" printable="true" numeration="invoice">
+                    <title-key>wshop.WOrderPrint.invoice</title-key>
+                    <xsl-template>/XSLTemplates/invoice/invoice.xsl</xsl-template>
+                </document>
+                <document alias="act" printable="true" closed-order-only="true">
+                    <title-key>wshop.WOrderPrint.act</title-key>
+                    <xsl-template>/XSLTemplates/act/act.xsl</xsl-template>
+                </document>
+                <document alias="procuration" printable="true">
+                    <title-key>wshop.WOrderPrint.procuration</title-key>
+                    <xsl-template>/XSLTemplates/procuration/procuration.xsl</xsl-template>
+                </document>
+            </documents>
+
+        </country>
+    </countries>
+
+</i18n>

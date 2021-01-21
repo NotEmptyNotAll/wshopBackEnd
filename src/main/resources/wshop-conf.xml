@@ -1,0 +1,1689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : wshop-conf.xml
+    Created on : 13 Ноябрь 2007 г., 18:19
+    Author     : misha
+    Description:
+        Purpose of the document follows.
+-->
+
+<!--<!DOCTYPE wshop PUBLIC '-//ITD//Wshop DTD//RU' 'wshop-conf.dtd'>-->
+<wshop>
+   <th>
+      <thAgentsSet>
+            
+         <thAgent
+            class="wshop.thesauri.customers.thCustomersAgent"
+            nameStringId="th.customers.Name"
+            tableName="customers"          
+            editVOClassName="wshop.forms.CustomerEditor"
+            realClassName="wshop.ejb3.entity.CustomerEntity"
+            extraClassName="wshop.ejb3.entity.CustomerExtraEntity"
+         >
+            <searchForm
+               width="750"
+               height="600"
+            />
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.wordergroups.thWOrderGroupsAgent"
+            nameStringId="th.wordergroups.Name"
+            tableName="wordergroups"          
+            editVOClassName="wshop.forms.WOrderGroupEditor"
+            realClassName="wshop.ejb3.entity.WOrderGroupEntity"
+         >
+            <searchForm
+               width="430"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+             
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.employees.thEmployeesAgent"
+            nameStringId="th.employees.Name"
+            tableName="employees"
+            editVOClassName="wshop.forms.EmployeeEditor"
+            realClassName="wshop.ejb3.entity.EmployeeEntity"
+            extraClassName="wshop.ejb3.entity.EmployeeExtraEntity"
+         >
+            <searchForm
+               width="430"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.details.thDetailsAgent"
+            nameStringId="th.details.Name"
+            tableName="details"
+            editVOClassName="wshop.forms.DetailEditor"
+            realClassName="wshop.ejb3.entity.DetailEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.automodels.thAutoModelsAgent"
+            nameStringId="th.automodels.Name"
+            tableName="automodels"
+            editVOClassName="wshop.forms.AutoModelEditor"
+            realClassName="wshop.ejb3.entity.AutoModelEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               
+            </searchForm>
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.autoyears.thAutoYearsAgent"
+            nameStringId="th.autoyears.Name"
+            tableName="autoyears"
+            editVOClassName="wshop.forms.AutoYearEditor"
+            realClassName="wshop.ejb3.entity.AutoYearEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               
+            </searchForm>
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.autoengines.thAutoEnginesAgent"
+            nameStringId="th.autoengines.Name"
+            tableName="autoengines"
+            editVOClassName="wshop.forms.AutoEngineEditor"
+            realClassName="wshop.ejb3.entity.AutoEngineEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="750"
+               height="500"
+            >
+               
+            </searchForm>
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.autoengineparams.thAutoEngineParamsAgent"
+            nameStringId="th.autoengineparams.Name"
+            tableName="autoengineparams"
+            editVOClassName="wshop.forms.AutoEngineParamEditor"
+            realClassName="wshop.ejb3.entity.AutoEngineParamEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="750"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.workitems.thWorkItemsAgent"
+            nameStringId="th.workitems.Name"
+            tableName="workitems"
+            editVOClassName="wshop.forms.WorkItemEditor"
+            realClassName="wshop.ejb3.entity.WorkItemEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="550"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="60" maxWidth="100"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="100" prefWidth="140" maxWidth="200"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="300" prefWidth="350" maxWidth="600"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.workitemsgroup.thWorkItemsGroupAgent"
+            nameStringId="th.workitems.Name"
+            tableName="workitemsgroup"
+            editVOClassName="wshop.forms.WorkItemGroupEditor"
+            realClassName="wshop.ejb3.entity.WorkItemGroupEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.operations.thOperationsAgent"
+            nameStringId="th.operations.Name"
+            tableName="operations"
+            editVOClassName="wshop.forms.OperationEditor"
+            realClassName="wshop.ejb3.entity.OperationEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.detailparams.thDetailParamsAgent"
+            nameStringId="th.detailparams.Name"
+            tableName="detailparams"
+            editVOClassName="wshop.forms.DetailParamEditor"
+            realClassName="wshop.ejb3.entity.DetailParamEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.paramvalues.thParamValuesAgent"
+            nameStringId="th.paramvalues.Name"
+            tableName="paramvalues"
+            editVOClassName="wshop.forms.ParamValueEditor"
+            realClassName="wshop.ejb3.entity.ParamValueEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.worderparams.thWOrderParamsAgent"
+            tableName="worderparams"
+            realClassName="wshop.ejb3.entity.WOrderParamEntity"
+            nameStringId="th.worderparams.Name"
+         >
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.operratios.thOperRatiosAgent"
+            nameStringId=""
+            tableName="operratios"
+            realClassName="wshop.ejb3.entity.OperRatioEntity"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            />
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.operratiodefs.thOperRatioDefsAgent"
+            nameStringId=""
+            tableName="operratiosdef"
+            realClassName="wshop.ejb3.entity.OperRatioDefEntity"
+            simpleCommon = "true"
+         />
+         
+         <thAgent
+            class="wshop.thesauri.worderimages.thWOrderImagesAgent"
+            nameStringId=""
+            tableName="worderimages"
+            realClassName="wshop.ejb3.entity.WOrderImageEntity"
+         />
+            
+         <thAgent
+            class="wshop.thesauri.resourcetypes.thResourceTypesAgent"
+            nameStringId="th.resourcetypes.Name"
+            tableName="resourcetypes"
+            editVOClassName="wshop.forms.ResourceTypeEditor"
+            realClassName="wshop.ejb3.entity.ResourceTypeEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.abstractresources.thAbstractResourcesAgent"
+            nameStringId="th.abstractresources.Name"
+            tableName="abstractresources"
+            editVOClassName="wshop.forms.AbstractResourceEditor"
+            realClassName="wshop.ejb3.entity.AbstractResourceEntity"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.availableresources.thAvailableResourcesAgent"
+            nameStringId="th.availableresources.Name"
+            tableName="availableresources"
+            editVOClassName="wshop.forms.AvailableResourceEditor"
+            realClassName="wshop.ejb3.entity.AvailableResourceEntity"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.operresources.thOperResourcesAgent"
+            nameStringId="th.operresources.Name"
+            tableName="operresources"
+            editVOClassName="wshop.forms.OperResourceEditor"
+            realClassName="wshop.ejb3.entity.OperResourceEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="quantity"
+                     titleStringId="wshop.thOperResources.TableCaption.Quantity"
+                     minWidth="50" prefWidth="50" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.jobs.thWOrderJobsAgent"
+            nameStringId="th.worderjobs.Name"
+            tableName="worderjobs"
+            editVOClassName="wshop.forms.WOrderJobEditor"
+            realClassName="wshop.ejb3.entity.WOrderJobEntity"
+            hiddenable="false"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+            </searchForm>
+         </thAgent>
+          
+         <thAgent 
+            class="wshop.thesauri.wordergroups.thSimplifiedWOrdersAgent"
+            nameStringId="th.worders.Name"
+            tableName="worders"
+            editVOClassName="wshop.forms.WOrderEditor"
+            realClassName="wshop.ejb3.entity.WorkOrderEntity"
+         >
+             
+            <searchForm
+               width="750"
+               height="500">
+                   
+            </searchForm>
+             
+         </thAgent>     
+
+         <thAgent
+            class="wshop.thesauri.worders.thWOrdersAgent"
+            nameStringId="th.worders.Name"
+            tableName="worders"
+            editVOClassName="wshop.forms.WOrderEditor"
+            realClassName="wshop.ejb3.entity.WorkOrderEntity"
+         >
+            <searchForm
+               width="760"
+               height="560"
+            />
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.workitemcategories.thWorkitemCategoriesAgent"
+            nameStringId="th.workitemcategories.Name"
+            tableName="workitemcategories"
+            editVOClassName="wshop.forms.WorkitemCategoryEditor"
+            realClassName="wshop.ejb3.entity.WorkitemCategoryEntity"
+            simpleCommon="true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.customercategories.thCustomerCategoriesAgent"
+            nameStringId="th.customercategories.Name"
+            tableName="customercategories"
+            editVOClassName="wshop.forms.CustomerCategoryEditor"
+            realClassName="wshop.ejb3.entity.CustomerCategoryEntity"
+            simpleCommon="true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.customercategories.thCustCatWorkitemPricingAgent"
+            nameStringId=""
+            tableName="custcatworkitempricing"
+            realClassName="wshop.ejb3.entity.CustCatWorkitemPricingEntity"
+            simpleCommon = "true"
+         >
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.customercategories.thCustCatJobPricesAgent"
+            nameStringId=""
+            tableName="custcatjobprices"
+            realClassName="wshop.ejb3.entity.CustCatJobPriceEntity"
+            simpleCommon = "true"
+         >
+         </thAgent>
+         
+         <thAgent
+            class="wshop.appprop.impl.thAppPropertyAgent"
+            tableName="appproperties"
+            nameStringId="th.appprop.Name"
+            realClassName="elma.th.ejb3.entity.AppPropertyEntity"
+         >
+            <searchForm
+               width="430"
+               height="500"
+            /> 
+         </thAgent>
+
+         <!--
+         <thAgent
+            class="wshop.thesauri.ratiotables.thRatioTablesAgent"
+            nameStringId="th.ratiotables.Name"
+            tableName="ratiotables"
+            editVOClassName="wshop.forms.RatioTableEditor"
+            realClassName="wshop.ejb.RatioTableValue"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+         -->
+
+         <thAgent
+            class="wshop.thesauri.ratiocalculators.thRatioCalculatorsAgent"
+            nameStringId="th.ratiocalculators.Name"
+            tableName="ratiocalculators"
+            editVOClassName="wshop.forms.RatioCalculatorEditor"
+            realClassName="wshop.ejb3.entity.RatioCalculatorEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="calculatorTypeId"
+                     titleStringId="thFork.TableCaption.Type"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.absconst.thAbsConstAgent"
+            nameStringId="th.absconst.name"
+            tableName="ABS_Const"
+            ditVOClassName="wshop.forms.AbsConstEditor"
+            realClassName="wshop.ejb3.entity.AbsConstEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+                  
+                  <searchFormTableColumn
+                     propAlias="value"
+                     minWidth="50" prefWidth="40" maxWidth="40"
+                     visible="true"
+                  />
+              
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.employeequalification.thEmployeeQualificationAgent"
+                  nameStringId="th.employeequalification.name"
+                  tableName="employeequalification"
+                  editVOClassName="wshop.forms.EmployeeQualificationEditor"
+                  realClassName="wshop.ejb3.entity.EmployeeQualificationEntity"
+                  simpleCommon = "true"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+                  <searchFormTable>
+                      <searchFormTableColumn
+                              propAlias="id"
+                              titleStringId="thFork.TableCaption.Id"
+                              minWidth="50" prefWidth="50" maxWidth="50"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="alias"
+                              titleStringId="thFork.TableCaption.Alias"
+                              minWidth="50" prefWidth="120" maxWidth="120"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="name"
+                              titleStringId="thFork.TableCaption.Name"
+                              minWidth="50" prefWidth="120" maxWidth="500"
+                              visible="true"
+                      />
+
+                  </searchFormTable>
+              </searchForm>
+          </thAgent>
+
+         <thAgent
+                  class="wshop.thesauri.employeedivision.thEmployeeDivisionAgent"
+                  nameStringId="th.employeedivision.name"
+                  tableName="employeedivision"
+                  editVOClassName="wshop.forms.EmployeeDivisionEditor"
+                  realClassName="wshop.ejb3.entity.EmployeeDivisionEntity"
+                  simpleCommon = "true"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+                  <searchFormTable>
+                      <searchFormTableColumn
+                              propAlias="id"
+                              titleStringId="thFork.TableCaption.Id"
+                              minWidth="50" prefWidth="50" maxWidth="50"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="alias"
+                              titleStringId="thFork.TableCaption.Alias"
+                              minWidth="50" prefWidth="120" maxWidth="120"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="name"
+                              titleStringId="thFork.TableCaption.Name"
+                              minWidth="50" prefWidth="120" maxWidth="500"
+                              visible="true"
+                      />
+
+                  </searchFormTable>
+              </searchForm>
+          </thAgent>
+
+         <thAgent
+                  class="wshop.thesauri.employeeposition.thEmployeePositionAgent"
+                  nameStringId="th.employeeposition.name"
+                  tableName="employeeposition"
+                  editVOClassName="wshop.forms.EmployeePositionEditor"
+                  realClassName="wshop.ejb3.entity.EmployeePositionEntity"
+                  simpleCommon = "true"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+                  <searchFormTable>
+                      <searchFormTableColumn
+                              propAlias="id"
+                              titleStringId="thFork.TableCaption.Id"
+                              minWidth="50" prefWidth="50" maxWidth="50"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="alias"
+                              titleStringId="thFork.TableCaption.Alias"
+                              minWidth="50" prefWidth="120" maxWidth="120"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="name"
+                              titleStringId="thFork.TableCaption.Name"
+                              minWidth="50" prefWidth="120" maxWidth="500"
+                              visible="true"
+                      />
+
+                  </searchFormTable>
+              </searchForm>
+          </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.paramsmachine.thParamsmachineAgent"
+            nameStringId="th.paramsmachine.name"
+            tableName="paramsmachine"
+            editVOClassName="wshop.forms.ParamsmachineEditor"
+            realClassName="wshop.ejb3.entity.ParamsmachineEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="value"
+                     minWidth="50" prefWidth="40" maxWidth="40"
+                     visible="true"
+                  />
+              
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.ratioparameters.thRatioParametersAgent"
+            nameStringId="th.ratioparameters.Name"
+            tableName="ratioparameters"
+            editVOClassName="wshop.forms.RatioParameterEditor"
+            realClassName="wshop.ejb3.entity.RatioParameterEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="ratioCalculatorId"
+                     visible="false"
+                  />
+                  <searchFormTableColumn
+                     propAlias="parameterTypeId"
+                     visible="false"
+                  />
+                  <searchFormTableColumn
+                     propAlias="parameterId"
+                     visible="false"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.worderexecutors.thWorderExecutorsAgent"
+            nameStringId="th.worderexecutors.Name"
+            tableName="worderexecutors"
+            editVOClassName="wshop.forms.WorderExecutorEditor"
+            realClassName="wshop.ejb3.entity.WorderExecutorEntity"
+            hiddenable="false"
+         >
+            <searchForm>
+               <searchFormTable>
+                  <searchFormTableColumn
+                     alias="beginTime"
+                     propAlias="beginTime"
+                     titleStringId="wshop.thWorderExecutors.TableCaption.beginTime"
+                     minWidth="100" prefWidth="105" maxWidth="110"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     alias="endTime"
+                     propAlias="endTime"
+                     titleStringId="wshop.thWorderExecutors.TableCaption.endTime"
+                     minWidth="100" prefWidth="105" maxWidth="110"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="employeeId"
+                     visible="false"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.taggroups.thTagGroupsAgent"
+            nameStringId="th.taggroups.Name"
+            tableName="taggroups"
+            editVOClassName="wshop.forms.TagGroupEditor"
+            realClassName="wshop.ejb3.entity.TagGroupEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.tags.thTagsAgent"
+            nameStringId="th.tags.Name"
+            tableName="tags"
+            editVOClassName="wshop.forms.TagEditor"
+            realClassName="wshop.ejb3.entity.TagEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.entitytypes.thEntityTypesAgent"
+            nameStringId="th.entitytypes.Name"
+            tableName="entitytypes"
+            editVOClassName="wshop.forms.EntityTypeEditor"
+            realClassName="wshop.ejb3.entity.EntityTypeEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.entitytags.thEntityTagsAgent"
+            nameStringId="th.entitytags.Name"
+            tableName="entitytags"
+            editVOClassName="wshop.forms.EntityTagEditor"
+            realClassName="wshop.ejb3.entity.EntityTagEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.jobs.thJobsAgent"
+            nameStringId="th.jobs.Name"
+            tableName="jobs"
+            editVOClassName="wshop.forms.JobEditor"
+            realClassName="wshop.ejb3.entity.JobEntity"
+            extraClassName="wshop.ejb3.entity.JobExtraEntity"
+            simpleCommon="true"
+         >
+            <searchForm
+               width="700"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="60" maxWidth="100"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="150" prefWidth="200" maxWidth="250"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="250" prefWidth="340" maxWidth="600"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="outPrice"
+                     titleStringId="thJobs.TableCaption.outPrice"
+                     minWidth="50" prefWidth="100" maxWidth="150"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.answers.thAnswersAgent"
+            nameStringId="th.answers.Name"
+            tableName="answers"
+            editVOClassName="wshop.forms.AnswerEditor"
+            realClassName="wshop.ejb3.entity.AnswerEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.jobtypes.thJobTypesAgent"
+            nameStringId="th.jobtypes.Name"
+            tableName="jobtypes"
+            editVOClassName="wshop.forms.JobTypeEditor"
+            realClassName="wshop.ejb3.entity.JobTypeEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.automarks.thAutomarksAgent"
+            nameStringId="th.automarks.Name"
+            tableName="automarks"
+            editVOClassName="wshop.forms.AutomarkEditor"
+            realClassName="wshop.ejb3.entity.AutomarkEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="50" prefWidth="120" maxWidth="120"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+         <thAgent
+            class="wshop.thesauri.currencies.thCurrenciesAgent"
+            nameStringId="th.currencies.Name"
+            tableName="currencies"
+            editVOClassName="wshop.forms.CurrencyEditor"
+            realClassName="wshop.ejb3.entity.CurrencyEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="3" prefWidth="80" maxWidth="500"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="500"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="rate"
+                     titleStringId="thCurrencies.TableCaption.Rate"
+                     minWidth="3" prefWidth="80" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.currencycodes.thCurrencyCodesAgent"
+            nameStringId="th.currencycodes.Name"
+            tableName="currencycodes"
+            editVOClassName="wshop.forms.CurrencyCodeEditor"
+            realClassName="wshop.ejb3.entity.CurrencyCodeEntity"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="thFork.TableCaption.Alias"
+                     minWidth="3" prefWidth="10" maxWidth="100"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thFork.TableCaption.Name"
+                     minWidth="50" prefWidth="120" maxWidth="200"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="rate"
+                     titleStringId="thFork.TableCaption.Rate"
+                     minWidth="3" prefWidth="10" maxWidth="50"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+            
+         <thAgent
+            class="wshop.thesauri.customercontacts.thCustomerContactsAgent"
+            nameStringId="th.customercontacts.Name"
+            tableName="customercontacts"
+            editVOClassName="wshop.forms.CustomerContactEditor"
+            realClassName="wshop.ejb3.entity.CustomerContactEntity"
+            extraClassName="wshop.ejb3.entity.CustomerContactExtraEntity"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            />
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.customeremails.thCustomerEmailsAgent"
+            nameStringId="th.customeremails.Name"
+            tableName="customeremails"
+            editVOClassName="wshop.forms.CustomerEmailEditor"
+            realClassName="wshop.ejb3.entity.CustomerEmailEntity"
+            extraClassName="wshop.ejb3.entity.CustomerEmailExtraEntity"
+         >
+            <searchForm
+               width="600"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="3" prefWidth="10" maxWidth="50"
+                     visible="false"
+                  />
+                  <searchFormTableColumn
+                     propAlias="email"
+                     titleStringId="thCustomerEmails.TableCaption.Email"
+                     minWidth="100" prefWidth="300" maxWidth="400"
+                     visible="true"
+                  />
+               
+                  <searchFormTableColumn
+                     propAlias="name"
+                     titleStringId="thCustomerEmails.TableCaption.Name"
+                     minWidth="100" prefWidth="300" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.smsjournal.thSmsJournalAgent"
+            nameStringId="th.smsjournal.Name"
+            tableName="smsjournal"
+            editVOClassName="wshop.forms.SmsJournalEditor"
+            realClassName="wshop.ejb3.entity.SmsJournalEntity"
+         >
+            <searchForm
+               width="700"
+               height="500"
+            />
+         </thAgent>
+         
+         <thAgent
+            class="wshop.thesauri.smsstatuses.thSmsStatusesAgent"
+            nameStringId="th.SmsStatuses.TableName"
+            tableName="smsstatuses"
+            editVOClassName="wshop.forms.SmsStatusEditor"
+            realClassName="wshop.ejb3.entity.SmsStatusEntry"
+            simpleCommon = "true"
+         >
+            <searchForm
+               width="400"
+               height="500"
+            >
+               <searchFormTable>
+                  <searchFormTableColumn
+                     propAlias="id"
+                     titleStringId="thFork.TableCaption.Id"
+                     minWidth="50" prefWidth="50" maxWidth="50"
+                     visible="true"
+                  />
+                  <searchFormTableColumn
+                     propAlias="alias"
+                     titleStringId="th.SmsStatuses.Name"
+                     minWidth="50" prefWidth="150" maxWidth="500"
+                     visible="true"
+                  />
+               </searchFormTable>
+            </searchForm>
+         </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.salarybonus.thSalaryBonusAgent"
+                  nameStringId="th.salarybonus.name"
+                  tableName="salarybonus"
+                  editVOClassName="wshop.forms.SalaryBonusEditor"
+                  realClassName="wshop.ejb3.entity.SalaryBonusEntity"
+                  simpleCommon = "true"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+                  <searchFormTable>
+                      <searchFormTableColumn
+                              propAlias="id"
+                              titleStringId="thFork.TableCaption.Id"
+                              minWidth="50" prefWidth="50" maxWidth="50"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="name"
+                              titleStringId="thFork.TableCaption.Name"
+                              minWidth="50" prefWidth="120" maxWidth="500"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="pointsNumber"
+                              titleStringId="thFork.TableCaption.pointsNumber"
+                              minWidth="50" prefWidth="120" maxWidth="120"
+                              visible="true"
+                      />
+
+                  </searchFormTable>
+              </searchForm>
+          </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.salarycheckoff.thSalaryCheckOffAgent"
+                  nameStringId="th.salarycheckoff.name"
+                  tableName="salarycheckoff"
+                  editVOClassName="wshop.forms.SalaryCheckOffEditor"
+                  realClassName="wshop.ejb3.entity.SalaryCheckOffEntity"
+                  simpleCommon = "true"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+                  <searchFormTable>
+                      <searchFormTableColumn
+                              propAlias="id"
+                              titleStringId="thFork.TableCaption.Id"
+                              minWidth="50" prefWidth="50" maxWidth="50"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="name"
+                              titleStringId="thFork.TableCaption.Name"
+                              minWidth="50" prefWidth="120" maxWidth="500"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="pointsNumber"
+                              titleStringId="thFork.TableCaption.pointsNumber"
+                              minWidth="50" prefWidth="120" maxWidth="120"
+                              visible="true"
+                      />
+
+                  </searchFormTable>
+              </searchForm>
+          </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.salaryworkcoef.thSalaryWorkCoefAgent"
+                  nameStringId="th.salaryworkcoef.name"
+                  tableName="salaryworkcoef"
+                  editVOClassName="wshop.forms.SalaryWorkCoefEditor"
+                  realClassName="wshop.ejb3.entity.SalaryWorkCoefEntity"
+                  simpleCommon = "true"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+                  <searchFormTable>
+                      <searchFormTableColumn
+                              propAlias="id"
+                              titleStringId="thFork.TableCaption.Id"
+                              minWidth="50" prefWidth="50" maxWidth="50"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="name"
+                              titleStringId="thFork.TableCaption.Name"
+                              minWidth="50" prefWidth="120" maxWidth="500"
+                              visible="true"
+                      />
+                      <searchFormTableColumn
+                              propAlias="coef"
+                              titleStringId="thFork.TableCaption.coef"
+                              minWidth="50" prefWidth="120" maxWidth="120"
+                              visible="true"
+                      />
+
+                  </searchFormTable>
+              </searchForm>
+          </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.wshopsalarycalculation.thWshopSalaryCalculationAgent"
+                  nameStringId="th.wshopsalarycalculation.name"
+                  tableName="wshopsalarycalculation"
+                  editVOClassName="wshop.forms.WshopSalaryCalculationEditor"
+                  realClassName="wshop.ejb3.entity.WshopSalaryCalculationEntity"
+          >
+              <searchForm
+                      width="750"
+                      height="500"
+              >
+              </searchForm>
+          </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.wshopsalarycalculation.thWshopSalaryCalculationBonusAgent"
+                  tableName="wshopsalarycalculationbonus"
+                  realClassName="wshop.ejb3.entity.WshopSalaryCalculationBonusEntity"
+          >
+          </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.salarycheckoff.thCalculationCheckOffAgent"
+                  nameStringId="th.calculationcheckoff.name"
+                  tableName="calculationcheckoff"
+                  editVOClassName="wshop.forms.CalculationCheckoffEditor"
+                  realClassName="wshop.ejb3.entity.CalculationCheCkoffEntity"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+              </searchForm>
+          </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.salarybonus.thCalculationBonusAgent"
+                  nameStringId="th.calculationbonus.name"
+                  tableName="calculationbonus"
+                  editVOClassName="wshop.forms.CalculationBonusEditor"
+                  realClassName="wshop.ejb3.entity.CalculationBonusEntity"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+              </searchForm>
+          </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.payments.thPaymentAgent"
+                  nameStringId="th.payments.name"
+                  tableName="payments"
+                  editVOClassName="wshop.forms.PaymentForm"
+                  realClassName="wshop.ejb3.entity.PaymentEntity"
+          >
+              <searchForm
+                      width="750"
+                      height="600"
+              >
+              </searchForm>
+          </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.distributionpayments.thDistributionPaymentAgent"
+                  nameStringId="th.distribution_payments.Name"
+                  tableName="distribution_payments"
+                  editVOClassName="wshop.forms.DistributionPaymentForm"
+                  realClassName="wshop.ejb3.entity.DistributionPaymentEntity"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+              </searchForm>
+          </thAgent>
+
+          <thAgent
+                  class="wshop.thesauri.timesheet.thTimesheetAgent"
+                  nameStringId="th.timesheet.Name"
+                  tableName="timesheet"
+                  editVOClassName="wshop.forms.TimesheetEditor"
+                  realClassName="wshop.ejb3.entity.TimesheetEntity"
+          >
+              <searchForm
+                      width="600"
+                      height="500"
+              >
+              </searchForm>
+          </thAgent>
+
+      </thAgentsSet>
+   </th>
+</wshop>
